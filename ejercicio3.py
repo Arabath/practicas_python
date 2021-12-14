@@ -34,13 +34,11 @@
             🧪 Dos puntos con las mismas coordenadas en X
             🧪 Dos puntos con las mismas coordenadas en Y
 """
-
 from excepcion_punto import DistanciaCero
-
 class Punto():
     """ Clase Punto """
 
-    def __init__ (self, cordenada_x: int, cordenada_y: int) -> None:
+    def __init__(self, cordenada_x: int, cordenada_y: int) -> None:
         self.__cordenadaX = cordenada_x
         self.__cordenadaY = cordenada_y
 
@@ -50,22 +48,24 @@ class Punto():
     @property
     def cordenadaY(self): return self.__cordenadaY
 
-    def esIgual(self, otroPunto: Punto) -> bool:
+
+    def esIgual(self, otroPunto: 'Punto') -> bool:
         """
         [+] Retorna True si dos puntos son iguales.
         [+] Retorna False si dos puntos son diferentes.
         """
         return self.cordenadaX == otroPunto.cordenadaX and self.cordenadaY == otroPunto.cordenadaY
 
-    # def distanciaA(self, otroPunto: Punto) -> int:
-    #     """
-    #     [+] Retorna la distancia a un Punto que recibe como parametro
-    #     """
-    #     if not self.esIgual(self, otroPunto):
-    #         raise DistanciaCero
-    #     else:
-    #         """"""
-            
-if __name__ == '__main__':
-    # punto1 = Punto(0,1)
-    # punto2 = Punto(0,1)
+
+    def distanciaA(self, otroPunto: 'Punto') -> int:
+        """
+        [+] Retorna la distancia a un Punto que recibe como parametro
+        """
+        if not self.esIgual(self, otroPunto):
+            raise DistanciaCero
+        else:
+            pass
+
+if __name__ == "__main__":
+    pass
+
