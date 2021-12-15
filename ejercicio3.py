@@ -35,6 +35,7 @@
             🧪 Dos puntos con las mismas coordenadas en Y
 """
 from excepcion_punto import DistanciaCero
+import math
 class Punto():
     """ Clase Punto """
 
@@ -54,18 +55,24 @@ class Punto():
         [+] Retorna True si dos puntos son iguales.
         [+] Retorna False si dos puntos son diferentes.
         """
-        return self.cordenadaX == otroPunto.cordenadaX and self.cordenadaY == otroPunto.cordenadaY
+        return self.__cordenadaX == otroPunto.__cordenadaX and self.__cordenadaY == otroPunto.__cordenadaY
 
 
-    def distanciaA(self, otroPunto: 'Punto') -> int:
+    def distanciaA(self, otroPunto: 'Punto') -> float:
         """
-        [+] Retorna la distancia a un Punto que recibe como parametro
+        [+] Retorna la distancia a otro Punto, el cual recibe como parametro.
         """
-        if not self.esIgual(self, otroPunto):
-            raise DistanciaCero
-        else:
-            pass
+        distanciaX = abs(self.__cordenadaX)-abs(otroPunto.__cordenadaX)
+        distanciaY = abs(self.__cordenadaY)-abs(otroPunto.__cordenadaY)
+        powc1 = math.pow(distanciaX,2)
+        powc2 = math.pow(distanciaY,2)
+        distancia = math.sqrt(powc1 + powc2)
+        return distancia
+
 
 if __name__ == "__main__":
-    pass
+    punto1 = Punto(8, 15)
+    punto2 = Punto(8, 15)
 
+    print(punto1.esIgual(punto2))
+    print(punto1.distanciaA(punto2))

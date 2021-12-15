@@ -14,8 +14,10 @@ class TestPunto(unittest.TestCase):
 
     def test_funcionDistanciaA(self):
         """ Verifica la distancia entre dos puntos """
+        punto1 = Punto(8, 15)
+        punto2 = Punto(2, 3)
 
-        self.assertFalse(self.punto1.distanciaA(self.punto2))
+        self.assertAlmostEquals(punto1.distanciaA(punto2), 13.42, places=2)
 
 if __name__ == "__main__":
     unittest.main()
