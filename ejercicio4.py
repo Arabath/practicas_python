@@ -1,6 +1,8 @@
 """
     Ejercicio 4:
-        La empresa para la que usted trabaja planea desarrollar un software para la visualización de figuras geométricas. Para esto se le pide que:
+        La empresa para la que usted trabaja planea desarrollar un software para 
+        la visualización de figuras geométricas. Para esto se le pide que:
+        
         a) Modele el concepto de un círculo en términos de su centro y su radio.
         b) Pueda saber si un punto se encuentra dentro de un círculo.
         c) Pueda saber si dos circulos son iguales en torno a su radio.
